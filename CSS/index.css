@@ -1,0 +1,81 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+* {
+  font-family: 'Passion One', cursive;
+}
+
+.container {
+  display: flex;
+  width: 550px;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border:solid #00BF63 2px;
+  border-radius: 25px;
+}
+
+.operadora {
+  color: #00BF63;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
+}
+
+.operadora:hover {
+  background-color: #dadada;
+}
+
+.value {
+  color: cbc9c9;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
+}
+
+.value:hover {
+  background-color: #cbc9c9;
+  ;
+}
+
+.payment {
+  color: cbc9c9;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
+}
+
+.payment:hover {
+  background-color: #f2f2f2;
+}
+
+.checkout {
+  color: cbc9c9;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: rgba(240, 240, 240, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkout.hidden {
+  opacity: 0;
+}

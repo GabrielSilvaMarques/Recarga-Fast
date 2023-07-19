@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recarga Celular</title>
+    <script src="./scripts/index.js"></script>
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
 
+<body>
+    <div class="container">
+        <h1>Recarga Fast</h1>
+        <div id="operadoraSelection">
+          <h2>Selecione a Operadora:</h2>
+          <div class="operadora" onclick="selectOperadora('Claro')">Claro</div>
+          <div class="operadora" onclick="selectOperadora('Tim')">Tim</div>
+          <div class="operadora" onclick="selectOperadora('Oi')">Oi</div>
+          <div class="operadora" onclick="selectOperadora('Vivo')">Vivo</div>
+        </div>
+    
+        <div id="idNumber" style="display: none;">
+          <h2>Digite o número do telefone que irá receber a recarga :</h2>
+          <input type="text" id="numero" placeholder="(DDD) + número" maxlength="11">
+          <button id="confirm" onclick="numberConfirm()">Confirmar</button>
+        </div>
+
+        <div id="valueSelection" style="display: none;">
+          <h2>Selecione o Valor:</h2>
+          <div class="value" onclick="selectValue(10)">R$ 10</div>
+          <div class="value" onclick="selectValue(15)">R$ 15</div>
+          <div class="value" onclick="selectValue(20)">R$ 20</div>
+          <div class="value" onclick="selectValue(25)">R$ 25</div>
+          <div class="value" onclick="selectValue(30)">R$ 30</div>
+        </div>
+    
+        <div id="paymentSelection" style="display: none;">
+          <h2>Selecione a forma de pagamento:</h2>
+          <button class="payment" onclick="selectPaymentOption('Cartão de Crédito')">Cartão de Crédito</button>
+          <button class="payment" onclick="selectPaymentOption('pix')">PIX</button>
+        </div>
+    
+        <div id="creditCardInfo" style="display: none;">
+          <h2>Informe os dados do Cartão de Crédito:</h2>
+          <!-- Adicione aqui os campos para os dados do cartão de crédito -->
+          <button onclick="finalizarCompra()">Finalizar</button>
+        </div>
+    
+        <div id="pixCode" style="display: none;">
+          <h2>Realize o pagamento para a chave pix abaixo:</h2>
+          <h3 class="pix">00020126360014BR.GOV.BCB.PIX0114123123141234215204000053039865802BR5913Recarga Facil6012Goiania - Go62160512RECARGAFACIL630467A1</h3>
+          <h4>Quando concluir a transação, sua recarga será efetuada imediatamente!</h4>
+        </div>
+    
+        <div id="checkout" style="display: none;" class="checkout">
+          <h2>Checkout</h2>
+          <p>Operadora: <span id="selectedOperadora"></span></p>
+          <p>Número: <span id="numberConfirmed"></span></p>
+          <p>Valor: R$ <span id="selectedValue"></span></p>
+          <p>Opção de pagamento: <span id="paymentOption"></span></p>
+          <button onclick="finalizarRecarga()">Finalizar Recarga</button>
+        </div>
+      </div>
+</body>
+</html>
